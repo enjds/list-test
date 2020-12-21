@@ -30,6 +30,11 @@
                 "glob": "_redirects",
                 "input": "src",
                 "output": "/"
+              },
+              {
+                "glob": "*.json",
+                "input": "src",
+                "output": "/"
               }
             ],
             "styles": [
