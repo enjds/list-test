@@ -1,0 +1,16 @@
+<div class="wrapper">
+    <div class="row-xs row-md center-xs">
+        <img class="product__thumbnail" [src]="item?.imagePath" [alt]="item?.title"/>
+    </div>
+    <div class="product__details row middle-xs around-xs">
+        <p class="product__title start-xs">{{ item.title }}</p>
+        <p class="product__price end-xs">{{ item.price }}</p>
+    </div>
+    <div class="product__stats row middle-xs around-xs">
+        <span class="middle-xs"><i class="icon-trophy"></i>{{ item.tags }}</span>
+        <span class="middle-xs"><i class="icon-pin"></i>{{ item.tags }}</span>
+        <span class="middle-xs"><i class="icon-star">{{ item.rating }}</i></span>
+        <span class="middle-xs"><i class="icon-shield">{{ item?.percentage }}</i>%</span>
+        <span class="middle-xs"><i class="icon-eye">ePack</i></span>
+    </div>
+</div>

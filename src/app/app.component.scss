@@ -1,0 +1,15 @@
+body {
+    background-color: #E5E5E5;
+}
+
+.button__view {
+    border: none;
+    padding: 15px 20px;
+    margin: 5px;
+    border-radius: 50px;
+    outline: none;
+}
+
+.button__view:disabled {
+    opacity: 0.8;
+}

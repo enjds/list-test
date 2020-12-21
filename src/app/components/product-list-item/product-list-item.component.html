@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="wrapper center-sm middle-sm">
+        <p class="product__id">{{ item.productId }}</p>
+    </div>
+    <div class="wrapper center-sm middle-sm">   
+        <img class="product__thumbnail" [src]="item?.imagePath" [alt]="item?.title"/>
+    </div>
+    <div class="wrapper center-sm middle-sm col-xs col-sm col-md col-lg-8">
+       <div class="product__description row container middle-sm">
+           <div class="col-sm-10 col-md-8 start-sm">
+                <div class="row">
+                    <h3 class="product__title">{{ item.title }}</h3>
+                    <div class="middle-sm">
+                        <div class="product__tags row center-sm middle-sm">
+                            <img class="verified" src="assets/fonts/icons/verified.svg" alt="Verified">
+                            <span class="timestamp">2 days ago</span>
+                            <span class="shipping">Dropship</span>
+                            <span class="label center-sm broken">
+                                <img src="assets/fonts/icons/broken.svg" alt="Broken">
+                            </span>
+                            <span class="label center-sm hidden">
+                                <img src="assets/fonts/icons/visibility.svg" alt="Hidden">
+                            </span>
+                            <span class="label center-sm settings">
+                                <img src="assets/fonts/icons/setting.svg" alt="Edit">
+                            </span>
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="row product__stats">
+                    <span class="middle-sm"><i class="icon-pin"></i>{{ item.tags }}</span>
+                    <span class="middle-sm"><i class="icon-star">{{ item.rating }}</i></span>
+                    <span class="middle-sm"><i class="icon-shield">{{ item?.percentage }}</i>%</span>
+                    <span class="middle-sm"><i class="icon-eye">ePack</i></span>
+                </div>
+           </div>
+           <p class="product__price col-md-2">{{ item.price }}</p>
+           <div class="product__actions col-sm end-sm col-md">
+                <a href="#"><i class="icon-eye"></i></a>
+                <a href="#"><i class="icon-heart"></i></a>
+                <a href="#"><i class="icon-add"></i></a>
+           </div>
+       </div>
+    </div>
+</div>

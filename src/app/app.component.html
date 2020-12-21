@@ -1,1 +1,9 @@
-App works
+<div class="wrapper">
+    <div class="views">
+        <button [disabled]="isButtonDisabled" class="button__view" (click)="toggle()">{{toggleButtonText}}</button>
+    </div>
+    <div class="products" *ngIf="(products$ | async) as products">
+        <product-list *ngIf="isListView" [data]="products"></product-list>
+        <product-grid *ngIf="!isListView" [data]="products"></product-grid>
+    </div>
+</div>
