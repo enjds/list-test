@@ -30,7 +30,11 @@ export class ProductService {
         return new Observable(observer => {
             this.http.get(this.url).subscribe((data : Product[])=> {
                 console.debug(data);
-                observer.next(data);
+                if (environment.production) {
+                    observer.next(data['products']);
+                } else {
+                    observer.next(data);
+                }
                 observer.complete();
             }, error => {
                 observer.error(error);
